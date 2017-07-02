@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width" />
+      <title>main</title>
+      <!--
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css"/>
+      !-->
+    </head>
+    <body>
+
+
+
+      <div class="container">
+
+        <div id="root">
+
+
+            <h1 class="title">All tasks</h1>
+            <ul>
+              <li v-for="task in tasks" v-text="task.description"></li>
+            </ul>
+
+            <h1 class="title">Completed tasks</h1>
+            <ul>
+
+              <li v-for="task in completedTasks">
+                {{task.description}} <button @click="toggleState(task)">toggle</button>
+              </li>
+            </ul>
+
+            <h1 class="title">Incompleted tasks</h1>
+            <ul>
+              <li v-for="task in incompletedTasks">
+                {{task.description}} <button @click="toggleState(task)">toggle</button>
+              </li>
+            </ul>
+
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+    </body>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./main.js"></script>
+</html>

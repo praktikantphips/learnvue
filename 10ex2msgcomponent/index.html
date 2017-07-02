@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>main</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css" type="text/css" media="all" />
+  </head>
+  <body>
+
+
+
+
+    <div id="root">
+
+      <div class="container">
+        <h1>this is an example of a modal</h1>
+        <modal v-show="modalisVisible" @notifyclose="modalisVisible=false">
+        <p>lorem ipsum dolor sit amet </p>
+        </modal>
+      </div>
+
+      <button @click="displayModal" type="button">show modal</button>
+
+    </div>
+
+
+
+
+  </body>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="./main.js"></script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>main</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css" type="text/css" media="all" />
+  </head>
+  <body>
+
+
+
+
+    <div id="root" class="container is-fluid">
+
+      <button @click="isvisible=true">show modal</button>
+
+      <modal v-show="isvisible" @close="isvisible=false">
+        <!-- this is nice if all you want to do is just input some text !-->
+        <template slot="header">
+          This is going to be the title
+        </template>
+
+        Lorem ipsum dolor sit amet
+
+        <template slot="footer">
+            <a class="button is-success">USER SUPPLIED BUTTON</a>
+        </template>
+
+      </modal>
+
+    </div>
+
+
+
+
+  </body>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="./main.js"></script>
+</html>
